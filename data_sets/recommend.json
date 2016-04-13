@@ -1,0 +1,14 @@
+{
+  "fields":[
+    {"name":"year","type":"INTEGER"},
+    {"name":"state","type":"RICH_TEXT"},
+    {"name":"model","type":"RICH_TEXT"},
+    {"name":"color","type":"RICH_TEXT"}
+  ],
+  "values": [
+    {
+      "row": ["2007","ca","bmw",""]
+    }
+  ],
+  "modifiableFeatures": ["year","model"]
+}
