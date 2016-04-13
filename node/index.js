@@ -28,7 +28,6 @@ var format = 'csv' // uncomment if wanted response is .csv
 var dataPredict = {file: filePathPredict, service_name: serviceName, format: format}
 
 client.call('predict', dataPredict, function(err, resp, body) {
-  console.log("predict")
   console.log(util.inspect(resp.body, false, null))
 })
 
@@ -39,6 +38,5 @@ var recommendationsAmount = 3
 var dataRecommend = {file: filePathRecommend, service_name: serviceName, required_label: requiredLabel}
 
 client.call('recommend', dataRecommend, function(err, resp, body) {
-  console.log("Recommend")
   console.log(util.inspect(resp.body, false, null))
 })
