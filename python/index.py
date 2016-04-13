@@ -4,7 +4,8 @@ client = HODClient('APIKEY')
 ## Train predictor
 serviceName = 'carsService'
 predictionField = 'color'
-filePathTrainPredictor = './data_sets/train_predictor.csv'
+filePathTrainPredictor = './data_sets/train_predictor.csv' # uncomment if using .csv
+# filePathTrainPredictor = './data_sets/train_predictor.json' # uncomment if using .json
 jobID = ''
 dataTrainPredictor = {'file': filePathTrainPredictor, 'prediction_field': predictionField, 'service_name': serviceName}
 
@@ -16,8 +17,10 @@ response = client.get_job_status(jobID)
 print response
 
 ## Predict
-filePathPredict = './data_sets/predict.csv'
-format = 'csv'
+filePathPredict = './data_sets/predict.csv' # uncomment if using .csv
+# filePathPredict = './data_sets/predict.json' # uncomment if using .json
+format = 'csv' # uncomment if wanted response is .csv
+# format = 'json' # uncomment if wanted response is .json
 dataPredict = {'file': filePathPredict, 'service_name': serviceName, 'format': format}
 
 r_predict = client.post_request(dataPredict, HODApps.PREDICT, async=False)
