@@ -4,9 +4,9 @@ client = HODClient('APIKEY')
 ## Train predictor
 serviceName = 'carsService'
 predictionField = 'color'
-filePathTrainPrediction = './data_sets/train_predictor.csv'
+filePathTrainPredictor = './data_sets/train_predictor.csv'
 jobID = ''
-dataTrainPredictor = {'file': filePathTrainPrediction, 'prediction_field': predictionField, 'service_name': serviceName}
+dataTrainPredictor = {'file': filePathTrainPredictor, 'prediction_field': predictionField, 'service_name': serviceName}
 
 jobID = client.post_request(dataTrainPredictor, HODApps.TRAIN_PREDICTOR, async=True)
 print jobID

@@ -4,8 +4,8 @@ client = HODClient.new('APIKEY')
 ## Train predictor
 serviceName = 'carsService'
 predictionField = 'color'
-filePathTrainPrediction = './data_sets/train_predictor.csv'
-dataTrainPredictor = {file: File.new(filePathTrainPrediction, 'rb'), prediction_field: predictionField, service_name: serviceName}
+filePathTrainPredictor = './data_sets/train_predictor.csv'
+dataTrainPredictor = {file: File.new(filePathTrainPredictor, 'rb'), prediction_field: predictionField, service_name: serviceName}
 
 r_trainPredictor= client.post('trainpredictor', dataTrainPredictor, async=true)
 puts r_trainPredictor.json()

@@ -5,11 +5,11 @@ var util = require('util')
 // Train predictor
 var serviceName = 'carsService'
 var predictionField = 'color'
-var filePathTrainPrediction = './data_sets/train_predictor.csv'
+var filePathTrainPredictor = './data_sets/train_predictor.csv'
 var jobID
-var dataTrainPredictor = {file: filePathTrainPrediction, prediction_field: predictionField, service_name: serviceName}
+var dataTrainPredictor = {file: filePathTrainPredictor, prediction_field: predictionField, service_name: serviceName}
 
-client.call('trainpredictor', data1, true, function(err1, resp1, body1) {
+client.call('trainpredictor', dataTrainPredictor, true, function(err1, resp1, body1) {
   jobID = resp1.body.jobID
   console.log(jobID)
 })

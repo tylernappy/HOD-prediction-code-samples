@@ -5,10 +5,10 @@ $hodClient = new HODClient('APIKEY');
 // Train predictor
 $serviceName = 'carsService';
 $predictionField = 'color';
-$filePathTrainPrediction = './data_sets/train_predictor.csv';
+$filePathTrainPredictor = './data_sets/train_predictor.csv';
 $jobID = '';
 $dataTrainPredictor = array(
-  'file' => $filePathTrainPrediction,
+  'file' => $filePathTrainPredictor,
   'prediction_field' => $predictionField,
   'service_name' => $serviceName
 );
