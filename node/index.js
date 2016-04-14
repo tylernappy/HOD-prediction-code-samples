@@ -10,8 +10,8 @@ var filePathTrainPredictor = './data_sets/train_predictor.csv' // uncomment if u
 var jobID
 var dataTrainPredictor = {file: filePathTrainPredictor, prediction_field: predictionField, service_name: serviceName}
 
-client.call('trainpredictor', dataTrainPredictor, true, function(err1, resp1, body1) {
-  jobID = resp1.body.jobID
+client.call('trainpredictor', dataTrainPredictor, true, function(err, resp, body) {
+  jobID = resp.body.jobID
   console.log(jobID)
 })
 
