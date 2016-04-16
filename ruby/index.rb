@@ -1,3 +1,10 @@
+# Note: This file is not meant to be run all at once. Comment out API calls (not variables) which are not being used.
+# Perform these steps in order:
+# 1) Call the Train Predictor API
+# 2) Call the Status API
+# 3) Call the Predict API
+# 4) Call the Recommend API
+
 require 'havenondemand'
 client = HODClient.new('APIKEY')
 
