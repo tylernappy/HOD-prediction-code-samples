@@ -12,8 +12,8 @@ $hodClient = new HODClient('APIKEY');
 // Train predictor
 $serviceName = 'carsService';
 $predictionField = 'color';
-$filePathTrainPredictor = './data_sets/train_predictor.csv'; // uncomment if using .csv
-// $filePathTrainPredictor = './data_sets/train_predictor.json'; // uncomment if using .json
+$filePathTrainPredictor = '../data_sets/train_predictor.csv'; // uncomment if using .csv
+// $filePathTrainPredictor = '../data_sets/train_predictor.json'; // uncomment if using .json
 $jobID = '';
 $dataTrainPredictor = array(
   'file' => $filePathTrainPredictor,
@@ -27,8 +27,8 @@ $hodClient->PostRequest($dataTrainPredictor, HODApps::TRAIN_PREDICTOR, REQ_MODE:
 $hodClient->GetJobStatus($jobID, 'requestCompletedWithContent');
 
  // Predict
-$filePathPredict = './data_sets/predict.csv'; // uncomment if using .csv
-// $filePathPredict = './data_sets/predict.json'; // uncomment if using .json
+$filePathPredict = '../data_sets/predict.csv'; // uncomment if using .csv
+// $filePathPredict = '../data_sets/predict.json'; // uncomment if using .json
 $format = 'csv'; // uncomment if wanted response is .csv
 // $format = 'json'; // uncomment if wanted response is .json
  $dataPredict = array(
@@ -40,7 +40,7 @@ $format = 'csv'; // uncomment if wanted response is .csv
 $hodClient->PostRequest($dataPredict, HODApps::PREDICT, REQ_MODE::SYNC, 'requestCompletedWithContent');
 
 // Recommend
-$filePathRecommend = './data_sets/recommend.json';
+$filePathRecommend = '../data_sets/recommend.json';
 $requiredLabel = 'blue';
 $recommendationsAmount = 3;
 $dataRecommend = array(
