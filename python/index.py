@@ -16,7 +16,8 @@ filePathTrainPredictor = './data_sets/train_predictor.csv' # uncomment if using 
 jobID = ''
 dataTrainPredictor = {'file': filePathTrainPredictor, 'prediction_field': predictionField, 'service_name': serviceName}
 
-jobID = client.post_request(dataTrainPredictor, HODApps.TRAIN_PREDICTOR, async=True)
+r_async = client.post_request(dataTrainPredictor, HODApps.TRAIN_PREDICTOR, async=True)
+jobID = r_async['jobID']
 print jobID
 
 ## Check status of train prediction
